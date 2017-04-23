@@ -18,31 +18,21 @@ body {
   font-family: 微软雅黑, "Microsoft Yahei", "Hiragino Sans GB", tahoma, arial, 宋体;
 }
 /*2. 导航栏样式*/
-.navbar {
+.navbar {  /*整体*/
   border: none;
 }
 .navbar-inverse {
   background-color: #252525;
 }
-.navbar-form {
-  float: right;
-  border: none;
-}
-.navbar-brand {
+.navbar-brand {  /*左侧logo*/
   margin-left: -15px;
   padding-top: 11px;
   padding-left: 0;
   padding-right: 0;
 }
-.navbar-collapse {
-}
-.navbar-collapse a {
-  padding-left: 25px !important;
-  padding-right: 25px !important;
-  color: #cecece !important;
-}
-.navbar-collapse a:hover {
-  color: #fff !important;
+.navbar-form {  /*搜索框*/
+  float: right;
+  border: none;
 }
 .navbar-form .form-control {
   width: 120px;
@@ -66,13 +56,21 @@ body {
   margin-bottom: 0;
   
 }
-.navbar-toggle {
+.navbar-collapse a {  /*导航列表*/
+  padding-left: 25px !important;
+  padding-right: 25px !important;
+  color: #cecece !important;
+}
+.navbar-collapse a:hover {
+  color: #fff !important;
+}
+.navbar-toggle {  /*点击显示（导航列表）按钮*/
   margin-right: -15px;
   margin-bottom: 0;
   padding-top: 10px;
   padding-right: 9px;
   border: none;
-  background-color: transparent;
+  background-color: transparent !important;
 }
 .navbar-toggle:hover {
   background-color: transparent !important;
@@ -86,7 +84,7 @@ body {
 .navbar-toggle.collapsed .icon-bar {
   background-color: #fff;
 }
-.navbar-xs {
+.navbar-xs {  /*导航下拉列表div*/
   position: absolute;
   width: 100%;
   background-color: #eee;
@@ -106,40 +104,58 @@ body {
   line-height: 30px;
   font-size: 16px;
   color: #333;
-  border-bottom: 1px solid #d6d6d6;
+  border-bottom: 1px solid #d0d0d0;
 }
 .navbar-xs li>a:after {
   content: "+";
   position: absolute;
-  right: 21px;
-  color: #d2d2d2;
+  right: 22px;
+  width: 16px;
+  color: #bbb;
   font-size: 22px;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.navbar-xs .open>a:after {
+  content: "―";
+  top: 9px;
 }
 .nav .open>a,
 .nav .open>a:focus,
 .nav .open>a:hover {
-  background-color: #eee;
   border-color: #d6d6d6;
 }
-.navbar-xs-1 {
+.nav .open a,
+.nav .open a:focus,
+.nav .open a:hover {
+  background-color: transparent;
+}
+.ul-xs {
   float: none;
   position: static;
   margin-top: 0;
   width: 100%;
-  padding: 0;
-  background-color: #c0c0c0;
+  padding: 0 0 0 15px;
+  background-color: #d6d6d6;
   border: none;
   border-radius: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.navbar-xs-1 li>a {
+.ul-xs li>a {
   border: none;
 }
-.navbar-xs-1 li>a:after {
-  content: "1";
+.ul-xs li>a:after {
+  content: "\e259";
+  font-size: 12px;
+  font-family: "Glyphicons Halflings";
+  font-weight: 100;
 }
-.navbar-xs-1 li>a:hover,
-.navbar-xs-1 li>a:focus {
-  background-color: #c0c0c0;
+.ul-xs .open>a:after {
+  content: "\e259";
+  font-size: 12px;
+  font-family: "Glyphicons Halflings";
+  font-weight: 100;
 }
+
