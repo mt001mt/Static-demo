@@ -8,6 +8,7 @@ $(
     $(".dropdown-toggle").dropdown();
     $(document).on("click", ".user-dropdown-toggle", function () {
       $(this).parent().toggleClass("open");
+      return false;
     });
   }
 );

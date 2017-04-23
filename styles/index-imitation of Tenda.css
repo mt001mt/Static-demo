@@ -101,6 +101,7 @@ body {
 .navbar-xs li>a {
   padding-top: 0;
   padding-bottom: 0;
+  height: 30px;
   line-height: 30px;
   font-size: 16px;
   color: #333;
@@ -129,9 +130,10 @@ body {
 .nav .open a,
 .nav .open a:focus,
 .nav .open a:hover {
+  color: #333;
   background-color: transparent;
 }
-.ul-xs {
+.ul-xs {  /*二级导航下拉列表div*/
   float: none;
   position: static;
   margin-top: 0;
@@ -153,9 +155,29 @@ body {
   font-weight: 100;
 }
 .ul-xs .open>a:after {
-  content: "\e259";
+  content: "\e258";
+  top: 0;
   font-size: 12px;
   font-family: "Glyphicons Halflings";
   font-weight: 100;
 }
-
+.ul-xs--1 {  /*三级导航下拉列表div*/
+  margin-right: 15px;
+  width: auto;
+  padding-left: 0;
+  background-color: #898989;
+}
+.ul-xs--1 li>a{
+  padding-left: 30px;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+.ul-xs li>a:after {
+  content: "";
+}
+.ul-xs li>a,
+.nav li>a:focus,
+.nav li>a:hover {
+  color: #333;
+  background-color: transparent;
+}
