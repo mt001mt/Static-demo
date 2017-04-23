@@ -1,0 +1,145 @@
+@charset "utf-8";
+/* CSS Document */
+/*本样式大纲如下
+1. HTML、BODY样式
+2. 导航栏样式
+3. 侧边栏样式
+4. 主体部分
+   (1) 导航栏
+   (2) 文档显示
+          查询
+          价格
+          统计
+   (3) 表格部分
+$. 通用部分
+*/
+/*1. body*/
+body {
+  font-family: 微软雅黑, "Microsoft Yahei", "Hiragino Sans GB", tahoma, arial, 宋体;
+}
+/*2. 导航栏样式*/
+.navbar {
+  border: none;
+}
+.navbar-inverse {
+  background-color: #252525;
+}
+.navbar-form {
+  float: right;
+  border: none;
+}
+.navbar-brand {
+  margin-left: -15px;
+  padding-top: 11px;
+  padding-left: 0;
+  padding-right: 0;
+}
+.navbar-collapse {
+}
+.navbar-collapse a {
+  padding-left: 25px !important;
+  padding-right: 25px !important;
+  color: #cecece !important;
+}
+.navbar-collapse a:hover {
+  color: #fff !important;
+}
+.navbar-form .form-control {
+  width: 120px;
+  height: 28px;
+  padding-left: 25px;
+  padding-right: 17px;
+  color: #333;
+  font-size: 12px;
+  font-family: Arial;
+  text-align: center;
+  border: none;
+  border-radius: 3px;
+  background: #666 url(../images/search162.png) 8px center no-repeat;
+  transition: background-color 0.1s ease-out;
+}
+.navbar-form .form-control:focus {
+  background-color: #fff;
+}
+.navbar-form {
+  margin-top: 0;
+  margin-bottom: 0;
+  
+}
+.navbar-toggle {
+  margin-right: -15px;
+  margin-bottom: 0;
+  padding-top: 10px;
+  padding-right: 9px;
+  border: none;
+  background-color: transparent;
+}
+.navbar-toggle:hover {
+  background-color: transparent !important;
+}
+.navbar .navbar-toggle .icon-bar {
+  width: 21px;
+  height: 3px;
+  border-radius: 0;
+  background-color: #fd4f00;
+}
+.navbar-toggle.collapsed .icon-bar {
+  background-color: #fff;
+}
+.navbar-xs {
+  position: absolute;
+  width: 100%;
+  background-color: #eee;
+}
+.navbar-xs:after {
+  content: "";
+  position: absolute;
+  top: -7px;
+  right: 16px;
+  border-bottom: 7px solid #eee;
+  border-left: 7px solid transparent;
+  border-right: 7.5px solid transparent;
+}
+.navbar-xs li>a {
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 30px;
+  font-size: 16px;
+  color: #333;
+  border-bottom: 1px solid #d6d6d6;
+}
+.navbar-xs li>a:after {
+  content: "+";
+  position: absolute;
+  right: 21px;
+  color: #d2d2d2;
+  font-size: 22px;
+}
+.nav .open>a,
+.nav .open>a:focus,
+.nav .open>a:hover {
+  background-color: #eee;
+  border-color: #d6d6d6;
+}
+.navbar-xs-1 {
+  float: none;
+  position: static;
+  margin-top: 0;
+  width: 100%;
+  padding: 0;
+  background-color: #c0c0c0;
+  border: none;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.navbar-xs-1 li>a {
+  border: none;
+}
+.navbar-xs-1 li>a:after {
+  content: "1";
+}
+.navbar-xs-1 li>a:hover,
+.navbar-xs-1 li>a:focus {
+  background-color: #c0c0c0;
+}
