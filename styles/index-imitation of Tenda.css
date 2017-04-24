@@ -54,12 +54,13 @@ body {
 .navbar-form {
   margin-top: 0;
   margin-bottom: 0;
-  
 }
-.navbar-collapse a {  /*导航列表*/
-  padding-left: 25px !important;
-  padding-right: 25px !important;
-  color: #cecece !important;
+.navbar-nav>li>a {  /*导航列表*/
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: #cecece;
 }
 .navbar-collapse a:hover {
   color: #fff !important;
@@ -84,7 +85,7 @@ body {
 .navbar-toggle.collapsed .icon-bar {
   background-color: #fff;
 }
-.navbar-xs {  /*导航下拉列表div*/
+.navbar-xs {  /*导航下拉列表 xs div*/
   position: absolute;
   width: 100%;
   background-color: #eee;
@@ -92,7 +93,7 @@ body {
 .navbar-xs:after {
   content: "";
   position: absolute;
-  top: -7px;
+  top: -6px;
   right: 16px;
   border-bottom: 7px solid #eee;
   border-left: 7px solid transparent;
@@ -180,4 +181,30 @@ body {
 .nav li>a:hover {
   color: #333;
   background-color: transparent;
+}
+
+
+@media (min-width: 768px) {
+  .navbar {  /*整体*/
+    border-radius: 0;
+  }
+  .navbar-form {  /*搜索框*/
+    margin-right: -30px;
+    margin-top: 10px;
+  }
+  .navbar-form .form-control {
+    padding-right: 11px;
+  }
+  .navbar-nav>li>a {  /*导航列表*/
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .collapse.navbar-right {
+    margin-right: 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .navbar .hidden-sm {
+    display: none !important;
+  }
 }

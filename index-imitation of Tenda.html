@@ -44,22 +44,22 @@
     <div class="collapse navbar-collapse navbar-right">
       <ul class="nav navbar-nav">
         <li>
-          <a href="#">家用产品</a>
+          <a href="#" class="user-collapse-toggle" data-target="#hovered-collapse-1">家用产品</a>
           <li></li>
         </li>
         <li><a href="project.html">商用网络</a></li>
         <li><a href="article.html">产品导购</a></li>
         <li><a href="resume.html">服务支持</a></li>
         <li><a href="about.html">官方商城</a></li>
-        <li><a href="about.html">走进腾达</a></li>
+        <li class="hidden-sm"><a href="about.html">走进腾达</a></li>
       </ul>
     </div>
   </div><!-- /.container -->
   <!--移动设备上显示的下拉式导航条-->
-  <div class="navbar-xs collapse">
+  <div class="navbar-xs collapse hidden-sm hidden-md hidden-lg">
     <ul class="nav">
       <li class="dropdown">
-        <a href="#" class="user-dropdown-toggle">家用产品</a>
+        <a href="#">家用产品</a>
         <!--二级下拉菜单-->
         <ul class="nav ul-xs dropdown-menu">
           <li class="dropdown">
@@ -142,17 +142,23 @@
       <li><a href="about.html">Worldwide</a></li>
     </ul>
   </div>
+  <!--鼠标在“家用产品”上时显示的内容-->
+  <div class="collapse" id="hovered-collapse-1" style="width: auto; background-color: red;">
+    123444
+  </div>
 </nav>
-<div class="container">
-  <span class="glyphicon glyphicon-menu-right"></span>
-</div>
+<!---->
+<div style="width: 0; height: 600px;" data-usage="scrollbar"></div>
 <!--script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script-->
 <!--script src="//cdn.bootcss.com/bootstrap/3.2.0/js/transition.min.js"></script-->
 <!--script src="//cdn.bootcss.com/bootstrap/3.2.0/js/collapse.min.js"></script-->
+<!--script src="//cdn.bootcss.com/bootstrap/3.2.0/js/trasition.min.js"></script-->
+<!--script src="//cdn.bootcss.com/bootstrap/3.2.0/js/carousel.min.js"></script-->
 <!--script src="https://cdn.bootcss.com/bootstrap/3.2.0/js/dropdown.js"></script-->
 <script src="scripts/jquery.js"></script>
 <script src="scripts/dropdown-modified.js"></script>
-<script src="scripts/collapse.js"></script>
+<script src="scripts/collapse-modified.js"></script>
+<script src="scripts/transition.js"></script>
 <script src="scripts/index-imitation of Tenda.js"></script>
 
 </body>
