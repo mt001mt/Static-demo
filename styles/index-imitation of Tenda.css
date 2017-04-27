@@ -17,8 +17,12 @@ $. 通用部分
 body {
   font-family: 微软雅黑, "Microsoft Yahei", "Hiragino Sans GB", tahoma, arial, 宋体;
 }
+.user-col-125 {
+  width: 12.5%;
+}
 /*2. 导航栏样式*/
 .navbar {  /*整体*/
+  margin-bottom: 0;
   border: none;
 }
 .navbar-inverse {
@@ -60,10 +64,13 @@ body {
   padding-right: 25px;
 }
 .navbar-inverse .navbar-nav>li>a {
-    color: #cecece;
+  color: #cecece;
 }
-.navbar-collapse a:hover {
-  color: #fff !important;
+.navbar-inverse .navbar-nav>li>a:focus {
+  color: #cecece;
+}
+.navbar-collapse .navbar-nav li>a:hover {
+  color: #fff;
 }
 .navbar-toggle {  /*点击显示（导航列表）按钮*/
   margin-right: -15px;
@@ -85,7 +92,7 @@ body {
 .navbar-toggle.collapsed .icon-bar {
   background-color: #fff;
 }
-.navbar-xs {  /*导航下拉列表 xs div*/
+.navbar-xs {  /*下拉菜单 xs显*/
   position: absolute;
   width: 100%;
   background-color: #eee;
@@ -134,7 +141,7 @@ body {
   color: #333;
   background-color: transparent;
 }
-.ul-xs {  /*二级导航下拉列表div*/
+.ul-xs {  /*二级导航下拉列表*/
   float: none;
   position: static;
   margin-top: 0;
@@ -162,7 +169,7 @@ body {
   font-family: "Glyphicons Halflings";
   font-weight: 100;
 }
-.ul-xs--1 {  /*三级导航下拉列表div*/
+.ul-xs--1 {  /*三级导航下拉列表*/
   margin-right: 15px;
   width: auto;
   padding-left: 0;
@@ -182,9 +189,80 @@ body {
   color: #333;
   background-color: transparent;
 }
+.nav-hovershow {  /*下拉菜单*/
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.hovershow {  /*下拉菜单 md显 鼠标在“家用产品”上时显示的内容*/
+  display: none;
+  padding-top: 5px;
+  padding-bottom: 16px;
+  background-color: rgba(38,38,38,0.8);
+}
+.thumbnail {
+  margin: 0;
+  padding: 25px 0 15px;
+  text-align: center;
+  line-height: 30px;
+  color: #aaa;
+  border: none;
+  background-color: transparent;
+} 
+.thumbnail:focus {
+  color: #aaa;
+  text-decoration: none;
+}
+.thumbnail:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: rgba(0,0,0,0.2);
+  transition: color 0.1s;
+}
+.thumbnail img {
+  transition: transform 0.5s;
+}
+.thumbnail:hover img {
+  transform: translateY(-2px);
+}
 
+#hovershow-2 {  /*下拉菜单 md显 鼠标在“官方商城”上时显示的内容*/
+  padding-top: 19.2px;
+  padding-bottom: 16px;
+  background-color: #fff;
+}
+#hovershow-2 .row-m0 {
+  margin: 0;
+}
+#hovershow-2 .thumbnail {
+  padding: 5px 4px 30px;
+  font-size: 16px;
+  line-height: inherit;
+  color: #000;
+}
+#hovershow-2 .thumbnail:focus {
+  color: #000;
+  text-decoration: none;
+}
+#hovershow-2 .thumbnail:hover {
+  color: #000;
+  text-decoration: none;
+  background-color: transparent;
+}
+#hovershow-2 .thumbnail img {
+  width: 70%;
+  height: auto;
+  transition: transform 0.5s;
+}
+#hovershow-2 .thumbnail:hover img {
+  transform: translateY(2px);
+}
+
+
+/*--------------------------------*/
 
 @media (min-width: 768px) {
+  /*2. 导航栏样式*/
   .navbar {  /*整体*/
     border-radius: 0;
   }
@@ -203,8 +281,57 @@ body {
     margin-right: 20px;
   }
 }
-@media (min-width: 768px) and (max-width: 992px) {
-  .navbar .hidden-sm {
+
+/*--------------------------------*/
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /*2. 导航栏样式*/
+  .navbar .hidden-sm {  /*在此宽度内不显示的导航条选项*/
     display: none !important;
+  }
+}
+
+/*--------------------------------*/
+
+@media (min-width: 992px) {
+  /*2. 导航栏样式*/
+  .navbar-form+.navbar-collapse {  /*导航列表*/
+    margin-right: 5px;
+  }
+  .navbar-nav>li>a {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .navbar-toggle+.navbar-collapse {  /*导航列表-全球列表*/
+    margin-right: -35px;
+  }
+  .navbar-form .form-control {  /*搜索框*/
+    margin-right: 15px;
+    width: 130px;
+    padding-right: 20px;
+  }
+  .thumbnail {  /*下拉菜单 md显 鼠标在“家用产品”上时显示的内容*/
+    padding-top: 25px;
+  }
+  .hovershow {  /*下拉菜单 md显 鼠标在“家用产品”上时显示的内容*/
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+/*--------------------------------*/
+
+@media (min-width: 1200px) {
+  /*2. 导航栏样式*/
+  .navbar-nav>li>a {  /*导航列表*/
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .navbar-toggle+.navbar-collapse {  /*导航列表-全球列表*/
+    margin-right: -45px;
+  }
+  .navbar-form .form-control {  /*搜索框*/
+    margin-left: -10px;
+    margin-right: 5px;
   }
 }
