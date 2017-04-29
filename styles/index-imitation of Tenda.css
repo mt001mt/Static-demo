@@ -1,9 +1,9 @@
 @charset "utf-8";
 /* CSS Document */
 /*本样式大纲如下
-1. HTML、BODY样式
+1. HTML、BODY等全局样式
 2. 导航栏样式
-3. 侧边栏样式
+3. 轮播样式
 4. 主体部分
    (1) 导航栏
    (2) 文档显示
@@ -24,6 +24,7 @@ body {
 .navbar {  /*整体*/
   margin-bottom: 0;
   border: none;
+  z-index: 1;
 }
 .navbar-inverse {
   background-color: #252525;
@@ -126,7 +127,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.navbar-xs .open>a:after {
+.navbar-xs>.open>a:after {
   content: "―";
   top: 9px;
 }
@@ -156,13 +157,13 @@ body {
 .ul-xs li>a {
   border: none;
 }
-.ul-xs li>a:after {
+.ul-xs>li>a:after {
   content: "\e259";
   font-size: 12px;
   font-family: "Glyphicons Halflings";
   font-weight: 100;
 }
-.ul-xs .open>a:after {
+.ul-xs>.open>a:after {
   content: "\e258";
   top: 0;
   font-size: 12px;
@@ -175,12 +176,12 @@ body {
   padding-left: 0;
   background-color: #898989;
 }
-.ul-xs--1 li>a{
+.ul-xs--1>li>a {
   padding-left: 30px;
   color: #fff;
   border-bottom: 1px solid #fff;
 }
-.ul-xs li>a:after {
+.ul-xs--1>li>a:after {
   content: "";
 }
 .ul-xs li>a,
@@ -225,7 +226,6 @@ body {
 .thumbnail:hover img {
   transform: translateY(-2px);
 }
-
 #hovershow-2 {  /*下拉菜单 md显 鼠标在“官方商城”上时显示的内容*/
   padding-top: 19.2px;
   padding-bottom: 16px;
@@ -257,9 +257,64 @@ body {
 #hovershow-2 .thumbnail:hover img {
   transform: translateY(2px);
 }
+/*3. 导航栏样式*/
+.carousel-inner>.item>img {
+  width: 100%;
+  max-width: none;
+}
+.carousel-indicators {
+  margin-bottom: 11px;
+  line-height: 0;
+}
+.carousel-indicators li {
+  margin: 2px 5px;
+  width: 8px;
+  height: 8px;
+  border: none;
+  background-color: rgba(76, 76, 76, 0.5);
+}
+.carousel-indicators .active {
+  margin: 0 5px;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #808080;
+  background-color: transparent;
+}
+.carousel .carousel-control {
+  display: none;
+  top: 50%;
+  bottom: auto;
+  width: auto;
+  background-image: none;
+  opacity: 0.75;
+}
+.carousel-control.left {
+  left: 23px;
+}
+.carousel-control.right {
+  right: 23px;
+}
+.carousel-control span {
+  color: #fff;
+  font-size: 40px;
+  line-height: 0.9;
+  text-shadow: none;
+  transition: color 0.3s;
+}
+.carousel-control span:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/*------------ONLY EXSMALL-----------*/
+@media (max-width: 767px) {
+  /*3. 导航栏样式*/
+  .carousel-inner>.item>img {
+    min-height: 275px;
+  }
+}
 
 
-/*--------------------------------*/
+/*------------SMALL----------------*/
 
 @media (min-width: 768px) {
   /*2. 导航栏样式*/
@@ -280,10 +335,27 @@ body {
   .collapse.navbar-right {
     margin-right: 20px;
   }
+  /*3. 导航栏样式*/
+  .carousel-inner>.item>img {
+    margin-left: -495px;
+    box-sizing: content-box;
+    width: 990px;
+    padding-left: 50%;
+  }
+  .carousel-indicators {
+    margin-bottom: 21px;
+  }
+  .carousel-control.left {
+    left: 53px;
+  }
+  .carousel-control.right {
+    right: 53px;
+  }
 }
 
-/*--------------------------------*/
 
+
+/*------------ONLY SMALL-----------*/
 @media (min-width: 768px) and (max-width: 991px) {
   /*2. 导航栏样式*/
   .navbar .hidden-sm {  /*在此宽度内不显示的导航条选项*/
@@ -291,7 +363,7 @@ body {
   }
 }
 
-/*--------------------------------*/
+/*------------MIDDLE-------------*/
 
 @media (min-width: 992px) {
   /*2. 导航栏样式*/
@@ -317,9 +389,14 @@ body {
     padding-top: 0;
     padding-bottom: 0;
   }
+  /*3. 导航栏样式*/
+  .carousel-inner>.item>img {
+    margin-left: -600px;
+    width: 1200px;
+  }
 }
 
-/*--------------------------------*/
+/*------------LARGE-------------*/
 
 @media (min-width: 1200px) {
   /*2. 导航栏样式*/
@@ -333,5 +410,20 @@ body {
   .navbar-form .form-control {  /*搜索框*/
     margin-left: -10px;
     margin-right: 5px;
+  }
+  /*3. 导航栏样式*/
+  .carousel-inner>.item>img {
+    margin-left: -700px;
+    width: 1400px;
+  }
+}
+
+/*------------OTHERS奇葩-------------*/
+
+@media (min-width: 1400px) {
+  /*3. 导航栏样式*/
+  .carousel-inner>.item>img {
+    margin-left: -960px;
+    width: 1920px;
   }
 }

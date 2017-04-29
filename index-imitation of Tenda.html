@@ -7,13 +7,13 @@
 
 <title>仿写腾达（Tenda）官网</title>
 
-<link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+<link href="./styles/bootstrap.css" rel="stylesheet" />
 <link href="./styles/index-imitation of Tenda.css" rel="stylesheet" />
 
 <!--[if lt IE 9]>
-  <script src="//cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
-  <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
-<![end if]-->
+  <script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+  <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+<![endif]-->
 </head>
 
 <body>
@@ -145,7 +145,7 @@
   <!--下拉菜单 md显 2个-->
   <div class="nav-hovershow">
     <!--下拉菜单 md显 鼠标在“家用产品”上时显示-->
-    <div class="hovershow hidden-xs" id="hovershow-1" data-lazy="images/navbar-">
+    <div class="hovershow hidden-xs" id="hovershow-1" data-lazy="images/navbar-?.png">
       <div class="container">
         <div class="row">
           <div class="col-xs-1 user-col-125">
@@ -200,7 +200,7 @@
       </div>  <!-- /.container -->
     </div> <!-- /.hovershow -->
     <!--下拉菜单 md显 鼠标在“官方商城”上时显示-->
-    <div class="hovershow hidden-xs" id="hovershow-2" data-lazy="images/shop-" style="display: none;">
+    <div class="hovershow hidden-xs" id="hovershow-2" data-lazy="images/shop-?.png" style="display: none;">
       <div class="container">
         <div class="row row-m0">
           <div class="col-xs-4">
@@ -227,7 +227,42 @@
   </div> <!-- /.nav-hovershow -->
 </nav>
 
-<!---->
+<!--以下是轮播图片-->
+<div id="carousel" class="carousel slide" data-ride="carousel">
+  <!--指示条-->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel" data-slide-to="0" class="active"></li><!--
+ --><li data-target="#carousel" data-slide-to="1"></li><!--
+ --><li data-target="#carousel" data-slide-to="2"></li><!--
+ --><li data-target="#carousel" data-slide-to="3"></li><!--
+ --><li data-target="#carousel" data-slide-to="4"></li>
+  </ol>
+  <!--图片-->
+  <div class="carousel-inner lazy-bg-onload" role="listbox" data-lazy="images/carousel-?.jpg">
+    <div class="item active">
+      <img class="order-0"/>
+    </div>
+    <div class="item">
+      <img class="order-1"/>
+    </div>
+    <div class="item">
+      <img class="order-2"/>
+    </div>
+    <div class="item">
+      <img class="order-3"/>
+    </div>
+    <div class="item">
+      <img class="order-4"/>
+    </div>
+  </div> <!-- /.carousel-inner -->
+  <!--翻页按钮-->
+  <a class="left carousel-control glyphicon" href="#carousel" role="button" data-slide="prev">
+    <span>&#57943;</span>
+  </a>
+  <a class="right carousel-control glyphicon" href="#carousel" role="button" data-slide="next">
+    <span>&#57944;</span>
+  </a>
+</div>
 <div style="width: 0; height: 600px;" data-usage="scrollbar"></div>
 <!--script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script-->
 <!--script src="//cdn.bootcss.com/bootstrap/3.2.0/js/transition.min.js"></script-->
@@ -241,6 +276,7 @@
 <script src="scripts/transition.js"></script-->
 <script src="scripts/bootstrap.js"></script>
 <script src="scripts/index-imitation of Tenda.js"></script>
+
 
 </body>
 </html>
