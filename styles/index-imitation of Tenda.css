@@ -4,14 +4,12 @@
 1. HTML、BODY等全局样式
 2. 导航栏样式
 3. 轮播样式
-4. 主体部分
-   (1) 导航栏
-   (2) 文档显示
-          查询
-          价格
-          统计
-   (3) 表格部分
-$. 通用部分
+4. 正文
+   (1) 家用新品
+   (2) 商用网络
+   (3) 走进腾达
+5. 页脚
+6. 杂项
 */
 /*1. body*/
 body {
@@ -23,7 +21,9 @@ body {
 /*2. 导航栏样式*/
 .navbar {  /*整体*/
   margin-bottom: 0;
+  height: 50px;
   border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   z-index: 1;
 }
 .navbar-inverse {
@@ -97,6 +97,7 @@ body {
   position: absolute;
   width: 100%;
   background-color: #eee;
+  transition: none;
 }
 .navbar-xs:after {
   content: "";
@@ -201,7 +202,7 @@ body {
   padding-bottom: 16px;
   background-color: rgba(38,38,38,0.8);
 }
-.thumbnail {
+.nav-hovershow .thumbnail {
   margin: 0;
   padding: 25px 0 15px;
   text-align: center;
@@ -210,20 +211,20 @@ body {
   border: none;
   background-color: transparent;
 } 
-.thumbnail:focus {
+.nav-hovershow .thumbnail:focus {
   color: #aaa;
   text-decoration: none;
 }
-.thumbnail:hover {
+.nav-hovershow .thumbnail:hover {
   color: #fff;
   text-decoration: none;
   background-color: rgba(0,0,0,0.2);
   transition: color 0.1s;
 }
-.thumbnail img {
+.nav-hovershow .thumbnail img {
   transition: transform 0.5s;
 }
-.thumbnail:hover img {
+.nav-hovershow .thumbnail:hover img {
   transform: translateY(-2px);
 }
 #hovershow-2 {  /*下拉菜单 md显 鼠标在“官方商城”上时显示的内容*/
@@ -257,13 +258,14 @@ body {
 #hovershow-2 .thumbnail:hover img {
   transform: translateY(2px);
 }
-/*3. 导航栏样式*/
+
+/*3. 轮播样式*/
 .carousel-inner>.item>img {
   width: 100%;
-  max-width: none;
+  min-height: 275px;
 }
 .carousel-indicators {
-  margin-bottom: 11px;
+  margin-bottom: 21px;
   line-height: 0;
 }
 .carousel-indicators li {
@@ -304,10 +306,210 @@ body {
 .carousel-control span:hover {
   color: rgba(255, 255, 255, 0.75);
 }
+.carousel-inner .link {  /*md下为轮播图片中的链接按钮*/
+  position: absolute;    /*xs下为轮播图片提供整张图片的超链接*/
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.carousel-inner .link-a1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
 
+/*4. 正文*/
+.maincontent {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.maincontent h4 {
+  margin: 0;
+  color: #000;
+  font-size: 20px;
+  line-height: 60px;
+  text-align: center;
+  background-image: url(../images/lineb.png);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+.maincontent .thumbnail {
+  margin-bottom: 0;
+  padding: 16px 0 4px;
+  text-align: center;
+  border: none;
+}
+.maincontent h5 {
+  font-size: 16px;
+  font-weight: bold;
+}
+.maincontent .thumbnail p {
+  margin-top: 8px;
+  margin-bottom: 0;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 20px;
+  font-size: 16px;
+  line-height: 1;
+}
+.maincontent a {
+  color: #000;
+  cursor: pointer;
+  transition: none;
+}
+.maincontent a:hover,
+.maincontent a:focus {
+  color: #fd4f00;
+  text-decoration: none;
+}
+/**家用新品**/
+.maincontent--0 img {
+  width: 80%;
+  transition: transform, 0.6s;
+}
+.maincontent--0 img:hover {
+  transform: scale(0.98, 0.98);
+}
+/**商用网络**/
+.maincontent--1 .row--1 {
+  padding-top: 19.2px;
+}
+.maincontent--1 img {
+  width: 100%;
+}
+.maincontent--1 .thumbnail {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.maincontent--1 h5,
+.maincontent--1 .thumbnail p {
+  margin: 0;
+  padding-top: 0;
+  padding-left: 15px;
+  line-height: 30px;
+  text-align: left;
+  border-left: 1px solid #ececec;
+  border-right: 1px solid #ececec;
+}
+.maincontent--1 h5 {
+  padding-top: 16px;
+  padding-bottom: 5px;
+}
+.maincontent--1 p {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ececec;
+}
+/**走进腾达**/
+.maincontent--2 .row--1 {
+  padding-top: 19.2px;
+}
+.maincontent--2 img {
+  width: 100%;
+}
+.maincontent--2 .thumbnail {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.maincontent--2 .thumbnail p {
+  margin-top: 0;
+  padding-top: 16px;
+  line-height: 25px;
+  text-align: left;
+}
+/**服务支持**/
+.maincontent--3 .row--1 {
+  padding-top: 30px;
+}
+.maincontent--3 .thumbnail {
+  padding-top: 25px;
+  padding-bottom: 29px;
+  transition: box-shadow 0.2s linear, transform 0.2s linear;
+}
+.maincontent--3 .thumbnail:hover {
+  box-shadow: 0 3px 20px 0 rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+.maincontent--3 .thumbnail h5 {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #333;
+  font-weight: normal;
+}
+.maincontent--3 .thumbnail p {
+  margin-top: 13px;
+  padding-top: 0;
+  font-size: 16px;
+  color: #666;
+}
+/*5. 页脚*/
+.footer {
+  padding-top: 21px;
+  padding-bottom: 20px;
+  border-top: 2px solid #f60;
+  background-color: #3f3b39;
+}
+.footer p {
+  margin-bottom: 0;
+  color: #eee;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+}
+.footer a {
+  color: #eee;
+}
+.footer a:hover {
+  color: #fd4f00;
+  text-decoration: none;
+}
+.footer span {
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #fff;
+}
+/*6. 杂项*/
+#top {
+  position: fixed;
+  right: 10px;
+  bottom: 100px;
+  display: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-image: url(../images/top.png);
+  overflow: hidden;
+  cursor: pointer;
+}
+#top p {
+  display: none;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 15px;
+  text-align: center;
+  color: #fff;
+  background-color: #ffa200;
+}
+#top:hover p {
+  display: block;
+}
+.top-p0 {
+  padding-top: 9px;
+}
+.top-p1 {
+  padding-bottom: 12px;
+}
 /*------------ONLY EXSMALL-----------*/
 @media (max-width: 767px) {
-  /*3. 导航栏样式*/
+  /*2. 导航栏样式*/
+  .navbar-form .form-group {
+    margin-bottom: 0;
+  }
+  /*3. 轮播样式*/
   .carousel-inner>.item>img {
     min-height: 275px;
   }
@@ -335,11 +537,13 @@ body {
   .collapse.navbar-right {
     margin-right: 20px;
   }
-  /*3. 导航栏样式*/
+  /*3. 轮播样式*/
   .carousel-inner>.item>img {
     margin-left: -495px;
     box-sizing: content-box;
     width: 990px;
+    height: 391.875px;
+    max-width: none;
     padding-left: 50%;
   }
   .carousel-indicators {
@@ -351,6 +555,116 @@ body {
   .carousel-control.right {
     right: 53px;
   }
+  .carousel-inner .link {  /*sm下为轮播图片中的链接按钮*/
+    top: 67%;              /*xs下为轮播图片提供整张图片的超链接*/
+    right: auto;
+    bottom: auto;
+    left: 20%;
+  }
+  .carousel-inner .item04+.link {
+    top: 64%;
+    left: 22%;
+  }
+  .carousel-inner .item+.link {
+    top: 64%;
+    left: 20.5%;
+  }
+  .carousel-inner a {
+    margin-right: 8px;
+    display: inline-block;
+    width: 86px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+  }
+  .carousel-inner .link-a1 {
+    position: static;
+    line-height: 26px;
+    color: #fd4f00;
+    border: 2px solid #fd4f00;
+    filter: alpha(opacity=100);
+    opacity: 1;
+  }
+  .carousel-inner .link-a2 {
+    color: #fff;
+    background-color: #fd4f00;
+  }
+  .carousel-inner .order-0+.link {  /*第一张轮播图片*/
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  .carousel-inner .order-0+.link .link-a1 {
+    position: absolute;
+    margin-right: 0;
+    width: auto;
+    height: auto;
+    border: none;
+    filter: alpha(opacity=0);
+    opacity: 0;
+  }
+  /*4. 正文样式*/
+  .maincontent h4 {
+    font-size: 22px;
+  }
+  .maincontent .row.hidden-xs {
+    margin: 0;
+    font-size: 16px;
+    line-height: 55px;
+    text-align: center;
+  }
+  .maincontent .thumbnail img {
+    width: auto;
+    max-width: 100%;
+  }
+  /**家用新品**/
+  .maincontent--0 .thumbnail p {
+    margin-top: 9px;
+    border-top: 1px solid #e7e8e9;
+  }
+  /**商用网络**/
+  .maincontent--1 {
+    padding-bottom: 48px;
+    background-color: #f2f2f2;
+  }
+  .maincontent--1 .row--1 {
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 18.5px;
+    width: 750px;
+  }
+  .maincontent--1 .thumbnail {
+  }
+  .maincontent--1 .thumbnail h5 {
+  }
+  .maincontent--1 .thumbnail p {
+  }
+  /**走进腾达**/
+  .maincontent--2 {
+    padding-bottom: 48px;
+  }
+  /**服务支持**/
+  .maincontent--3 {
+    padding-bottom: 48px;
+    background-color: #f2f2f2;
+  }
+  .maincontent--3 .row--1 {
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 30px;
+    width: 750px;
+  }
+  /*页脚*/
+  .footer {
+    text-align: center;
+  }
+  .footer p {
+    display: inline-block;
+    font-size: 12.8px;
+  }
 }
 
 
@@ -360,6 +674,25 @@ body {
   /*2. 导航栏样式*/
   .navbar .hidden-sm {  /*在此宽度内不显示的导航条选项*/
     display: none !important;
+  }
+  /*4. 正文样式*/
+  /**商用网络**/
+  .maincontent--1 .thumbnail h5 {
+    display: none;
+  }
+  .maincontent--1 .thumbnail p {
+    height: 48px;
+    line-height: 25px;
+  }
+  /**走进腾达**/
+  .maincontent--2 .thumbnail h5 {
+    display: none;
+  }
+  .maincontent--2 .thumbnail p {
+    padding-top: 0;
+    height: 48px;
+    line-height: 25px;
+    overflow: hidden;
   }
 }
 
@@ -382,7 +715,7 @@ body {
     width: 130px;
     padding-right: 20px;
   }
-  .thumbnail {  /*下拉菜单 md显 鼠标在“家用产品”上时显示的内容*/
+  .nav-hovershow .thumbnail {  /*下拉菜单 md显 鼠标在“家用产品”上时显示的内容*/
     padding-top: 25px;
   }
   .hovershow {  /*下拉菜单 md显 鼠标在“家用产品”上时显示的内容*/
@@ -393,6 +726,28 @@ body {
   .carousel-inner>.item>img {
     margin-left: -600px;
     width: 1200px;
+    height: 475px;
+  }
+  .carousel-inner .link {
+    right: auto;
+    bottom: auto;
+    left: 20%;
+  }
+  .carousel-inner a {  /*sm下为轮播图片中的链接按钮*/
+    width: 92px;
+    height: 31px;
+    line-height: 31px;
+  }
+  .carousel-inner .link-a1 {
+    line-height: 27px;
+  }
+  /*4. 正文样式*/
+  .maincontent {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .maincontent .thumbnail p {
+    margin-top: 8px;
   }
 }
 
@@ -415,6 +770,11 @@ body {
   .carousel-inner>.item>img {
     margin-left: -700px;
     width: 1400px;
+    height: 554.166px;
+  }
+  .carousel-inner a {  /*sm下为轮播图片中的链接按钮*/
+    margin-right: 14px;
+    width: 96px;
   }
 }
 
@@ -425,5 +785,15 @@ body {
   .carousel-inner>.item>img {
     margin-left: -960px;
     width: 1920px;
+    height: 760px;
+  }
+  .carousel-inner a {  /*sm下为轮播图片中的链接按钮*/
+    margin-right: 22px;
+    width: 98px;
+    height: 37px;
+    line-height: 37px;
+  }
+  .carousel-inner .link-a1 {
+    line-height: 33px;
   }
 }
