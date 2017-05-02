@@ -1,13 +1,13 @@
 // JavaScript Document
-window.addEventListener("load", function () {
+/*window.addEventListener("load", function () {
   //scrollTo(0, 5000);
-  /*setTimeout(function () {
+  setTimeout(function () {
     scrollTo(0, 1000);
   }, 300);
   setTimeout(function () {
     scrollTo(0, 1500);
-  }, 600);*/
-});
+  }, 600);
+});*/
 $(function () {
   var hovershowDuration = 200, //hover时显示下拉菜单的时间，单位ms
       temp = $(".user-hovershow-toggle"),
@@ -23,7 +23,7 @@ $(function () {
   temp = null;
   
   //关闭轮播
-  $("#carousel").carousel("pause");
+  //$("#carousel").carousel("pause");
   
   //关闭下拉菜单功能
   $(document).off(".dropdown");
@@ -192,7 +192,7 @@ $(function () {
   //实现背景图的延迟加载，将参数对应的元素的data-target找到img的容器，
   //再根据容器的data-original，按顺序给img的src赋值
   //
-  function getLazyBackgroundImage (selector) {
+  /*function getLazyBackgroundImage (selector) {
     if (!selector) {
       return;
     }
@@ -212,7 +212,7 @@ $(function () {
     $img.each(function () {
       $(this).css("backgroundImage", src);
     });
-  }
+  }*/
   //mouseover触发显示相应的下拉菜单
   function hoverSlideDown (e) {
     var target = e.target;
