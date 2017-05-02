@@ -1,6 +1,6 @@
 // JavaScript Document
 window.addEventListener("load", function () {
-  scrollTo(0, 5000);
+  //scrollTo(0, 5000);
   /*setTimeout(function () {
     scrollTo(0, 1000);
   }, 300);

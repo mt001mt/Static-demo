@@ -631,10 +631,7 @@ body {
     background-color: #f2f2f2;
   }
   .maincontent--1 .row--1 {
-    margin-right: auto;
-    margin-left: auto;
     padding-top: 18.5px;
-    width: 750px;
   }
   .maincontent--1 .thumbnail {
   }
@@ -652,10 +649,7 @@ body {
     background-color: #f2f2f2;
   }
   .maincontent--3 .row--1 {
-    margin-right: auto;
-    margin-left: auto;
     padding-top: 30px;
-    width: 750px;
   }
   /*页脚*/
   .footer {
@@ -722,7 +716,7 @@ body {
     padding-top: 0;
     padding-bottom: 0;
   }
-  /*3. 导航栏样式*/
+  /*3. 轮播样式*/
   .carousel-inner>.item>img {
     margin-left: -600px;
     width: 1200px;
@@ -746,8 +740,38 @@ body {
     padding-top: 48px;
     padding-bottom: 48px;
   }
-  .maincontent .thumbnail p {
-    margin-top: 8px;
+  /**家用新品**/
+  .maincontent--0 {
+    padding-bottom: 64px;
+  }
+  /**商用网络**/
+  .maincontent--1 .row--1 {
+    padding-top: 19.2px;
+  }
+  .maincontent--1 p {
+    padding-right: 15px;
+  }
+  /*5. 页脚*/
+  .footer .list {
+    margin-bottom: 20px;
+    padding-top: 2px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #333;
+  }
+  .footer dl {
+    margin-bottom: 0;
+    font-size: 16px;
+    color: #eee;
+    text-align: left;
+  }
+  .footer dt {
+    line-height: 48px;
+    font-weight: normal;
+  }
+  .footer dd a {
+    font-size: 0.8em;
+    line-height: 24px;
+    color: #ccc;
   }
 }
 
@@ -766,7 +790,7 @@ body {
     margin-left: -10px;
     margin-right: 5px;
   }
-  /*3. 导航栏样式*/
+  /*3. 轮播样式*/
   .carousel-inner>.item>img {
     margin-left: -700px;
     width: 1400px;
@@ -775,6 +799,19 @@ body {
   .carousel-inner a {  /*sm下为轮播图片中的链接按钮*/
     margin-right: 14px;
     width: 96px;
+  }
+  /*4. 正文样式*/
+  .maincontent {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  /**家用新品**/
+  .maincontent--0 {
+    padding-top: 48px;
+    padding-bottom: 80px;
+  }
+  .maincontent--0 .thumbnail p {
+    margin-top: 8px;
   }
 }
 
