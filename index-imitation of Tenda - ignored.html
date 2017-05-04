@@ -513,8 +513,8 @@
     <dl class="col-md-2" id="modal">
       <dt>关注腾达</dt>
       <dd><a href="#">腾达官方微博</a></dd>
-      <dd><a data-toggle="modal" data-target="#modal-wx">腾达官方微信</a></dd>
-      <dd><a data-toggle="modal" data-target="#modal-qq">腾达官方Q群</a></dd>
+      <dd><a data-toggle="modal" data-target="#modal-wx" id="modal-wx-toggle">腾达官方微信</a></dd>
+      <dd><a data-toggle="modal" data-target="#modal-qq" id="modal-qq-toggle">腾达官方Q群</a></dd>
     </dl>
   </div> <!-- /.row hidden-xs hidden-sm list -->
   <p>
@@ -530,8 +530,8 @@
   <p class="top-p0">返回</p>
   <p class="top-p1">顶部</p>
 </div>
-<!--微信、QQ弹出窗口-->
-<div class="modal" tabindex="-1" id="modal-wx">
+<!--微信弹出窗口-->
+<div class="modal fade" tabindex="-1" id="modal-wx" data-backdrop="static" data-original="images/wx.jpg">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -539,24 +539,40 @@
         <h4 class="modal-title">腾达官方微信二维码</h4>
       </div>
       <div class="modal-body">
-        <p>打开微信，点击右上角的"+" , 选择"扫一扫"功能,</p>
-        <p>对准下方二维码即可</p>
-        <img alt="图片崩溃了" data-original="images/wx.jpg"/>
+        <p>打开微信，点击右上角的“+”，选择“扫一扫”功能，</p>
+        <p>对准下方二维码即可。</p>
+        <img alt="图片崩溃了" />
       </div>
     </div> <!-- /.modal-content -->
   </div> <!-- /.modal-dialog -->
 </div> <!-- /.modal -->
-<!--script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script-->
+<!--QQ弹出窗口-->
+<div class="modal fade" tabindex="-1" id="modal-qq" data-backdrop="static" data-original="images/qq.jpg">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        <h4 class="modal-title">腾达官方QQ群二维码</h4>
+      </div>
+      <div class="modal-body">
+        <p>打开QQ，扫描加入腾达粉丝群</p>
+        <p>或搜索群号：465931688</p>
+        <img alt="图片崩溃了" />
+      </div>
+    </div> <!-- /.modal-content -->
+  </div> <!-- /.modal-dialog -->
+</div> <!-- /.modal -->
+<!--script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script-->
 <!--script src="//cdn.bootcss.com/bootstrap/3.2.0/js/transition.min.js"></script-->
 <!--script src="//cdn.bootcss.com/bootstrap/3.2.0/js/collapse.min.js"></script-->
 <!--script src="//cdn.bootcss.com/bootstrap/3.2.0/js/trasition.min.js"></script-->
 <!--script src="//cdn.bootcss.com/bootstrap/3.2.0/js/carousel.min.js"></script-->
-<!--script src="https://cdn.bootcss.com/bootstrap/3.2.0/js/dropdown.js"></script-->
-<script src="scripts/jquery.1.12.js"></script>
+<!--script src="//cdn.bootcss.com/bootstrap/3.2.0/js/dropdown.js"></script-->
+<script src="scripts/jquery-1.12.js"></script>
 <!--script src="scripts/dropdown-modified.js"></script>
 <script src="scripts/collapse-modified.js"></script>
 <script src="scripts/transition.js"></script-->
-<script src="scripts/bootstrap.js"></script>
+<script src="scripts/bootstrap-3.3.7.js"></script>
 <script src="scripts/index-imitation of Tenda.js"></script>
 
 

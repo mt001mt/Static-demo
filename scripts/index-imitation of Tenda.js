@@ -7,6 +7,7 @@
   setTimeout(function () {
     scrollTo(0, 1500);
   }, 600);
+  //$("#modal-wx-toggle").trigger("click");
 });*/
 $(function () {
   var hovershowDuration = 200, //hover时显示下拉菜单的时间，单位ms
@@ -76,12 +77,15 @@ $(function () {
       TopButtonVisibility = false;
     }
   });
-  //给返回顶部按钮添加click事件和scroll显隐事件
-  
+  //微信、QQ弹窗设置图片延迟加载
+  $("#modal-wx-toggle").one("click", getGroupLazyImage);
+  $("#modal-qq-toggle").one("click", getGroupLazyImage);
+
   /************************以下是函数定义********************************/
   /*******************************************************************/
-  //实现图片 组 的延迟加载，根据参数找到img的容器，
-  //再根据容器的data-original，按顺序给img的src赋值、
+  //实现图片 组 的延迟加载，根据参数找到img的父容器，
+  //再根据容器的data-original，按顺序给img的src赋值
+  //父容器可以是<img>元素
   //@param1 selector 可选类型为Event、String，根据该值找到img的容器
   //@param2 width Num 可无，默认无。若有，表示当document.offsetWidth < width时，src加后缀
   //@param3 sufsrc String 可无，默认无。若有，表示当document.offsetWidth < width时，src加后缀。须和width同用。
@@ -89,14 +93,19 @@ $(function () {
   //可直接调用，可被用作事件处理程序
   function getGroupLazyImage (selector, width, sufsrc) {
     var $parent, $img, src, suf, lastIndex;
-    
+    //debugger;
     if (typeof selector === "string") {
       $parent = $(selector);
     } else {
       $parent = $($(selector.target).attr("data-target"));
     }
+    //如果父容器本身为<img>
+    if ($parent.is("img")) {
+      $img = $parent;
+    } else {
+      $img = $parent.find("img");
+    }
     
-    $img = $parent.find("img");
     if (!$img.length) {
       return;
     }
@@ -121,7 +130,7 @@ $(function () {
     });
     
   }
-  //实现图片的延迟加载，包括添加resize、scoll、DOMContentLoaded事件，
+  //一键实现图片的延迟加载，包括添加resize、scoll、DOMContentLoaded事件，
   //判断需要加载的图片，加载图片等一系列操作
   //@param None
   //@return undefined

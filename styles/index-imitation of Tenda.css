@@ -15,6 +15,11 @@
 body {
   font-family: 微软雅黑, "Microsoft Yahei", "Hiragino Sans GB", tahoma, arial, 宋体;
 }
+.modal-open {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  overflow: auto;
+}
 .user-col-125 {
   width: 12.5%;
 }
@@ -473,6 +478,7 @@ body {
   color: #fff;
 }
 /*6. 杂项*/
+/**返回顶部**/
 #top {
   position: fixed;
   right: 10px;
@@ -503,21 +509,27 @@ body {
 .top-p1 {
   padding-bottom: 12px;
 }
+/**微信、QQ弹出框**/
+.modal-open .modal {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
 .modal-dialog {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
+  top: 50%;
+  margin: -300px auto;
   width: 500px;
+}
+.modal-content {
   height: 400px;
   border: 1px solid #ccc;
   border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 .modal-header {
   padding: 0 0 0 20px;
   background-color: #f5f5f5;
+  border: none;
 }
 .modal-header h4 {
   font-size: 16px;
@@ -541,6 +553,23 @@ body {
   position: absolute;
   top: -15px;
   left: -4px;
+}
+.modal-header .close span:focus {
+  outline: none;
+}
+.modal-body {
+  padding: 20px 0;
+  text-align: center;
+}
+.modal-body p {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 25px;
+}
+.modal-body img {
+  padding-top: 10px;
+  width: 250px;
 }
 /*------------ONLY EXSMALL-----------*/
 @media (max-width: 767px) {
