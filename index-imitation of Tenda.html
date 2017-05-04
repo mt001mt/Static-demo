@@ -8,8 +8,8 @@
 
 <title>仿写腾达（Tenda）官网</title>
 
-<link href="./styles/bootstrap.css" rel="stylesheet" />
-<link href="./styles/index-imitation of Tenda.css" rel="stylesheet" />
+<link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+<link href="styles/index-imitation of Tenda.css" rel="stylesheet" />
 
 <!--[if lt IE 9]>
   <script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
@@ -239,7 +239,7 @@
  --><li data-target="#carousel" data-slide-to="4"></li>
   </ol>
   <!--图片-->
-  <div class="carousel-inner lazy-onload" role="listbox" data-original="images/carousel-?.jpg">
+  <div class="carousel-inner lazy-onload" data-original="images/carousel-?.jpg">
     <div class="item active">
       <img src="images/1x1.bmp" class="order-0"/>
       <div class="link">
@@ -276,10 +276,10 @@
     </div>
   </div> <!-- /.carousel-inner -->
   <!--翻页按钮-->
-  <a class="left carousel-control glyphicon" href="#carousel" role="button" data-slide="prev">
+  <a class="left carousel-control glyphicon" href="#carousel" data-slide="prev">
     <span>&#57943;</span>
   </a>
-  <a class="right carousel-control glyphicon" href="#carousel" role="button" data-slide="next">
+  <a class="right carousel-control glyphicon" href="#carousel" data-slide="next">
     <span>&#57944;</span>
   </a>
 </div>
@@ -510,11 +510,11 @@
       <dd><a href="#">京东旗舰店</a></dd>
       <dd><a href="#">苏宁旗舰店</a></dd>
     </dl>
-    <dl class="col-md-2">
+    <dl class="col-md-2" id="modal">
       <dt>关注腾达</dt>
       <dd><a href="#">腾达官方微博</a></dd>
-      <dd><a href="#">腾达官方微信</a></dd>
-      <dd><a href="#">腾达官方Q群</a></dd>
+      <dd><a data-toggle="modal" data-target="#modal-wx" id="modal-wx-toggle">腾达官方微信</a></dd>
+      <dd><a data-toggle="modal" data-target="#modal-qq" id="modal-qq-toggle">腾达官方Q群</a></dd>
     </dl>
   </div> <!-- /.row hidden-xs hidden-sm list -->
   <p>
@@ -530,17 +530,41 @@
   <p class="top-p0">返回</p>
   <p class="top-p1">顶部</p>
 </div>
-<!--script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script-->
-<!--script src="//cdn.bootcss.com/bootstrap/3.2.0/js/transition.min.js"></script-->
-<!--script src="//cdn.bootcss.com/bootstrap/3.2.0/js/collapse.min.js"></script-->
-<!--script src="//cdn.bootcss.com/bootstrap/3.2.0/js/trasition.min.js"></script-->
-<!--script src="//cdn.bootcss.com/bootstrap/3.2.0/js/carousel.min.js"></script-->
-<!--script src="https://cdn.bootcss.com/bootstrap/3.2.0/js/dropdown.js"></script-->
-<script src="scripts/jquery.js"></script>
-<!--script src="scripts/dropdown-modified.js"></script>
-<script src="scripts/collapse-modified.js"></script>
-<script src="scripts/transition.js"></script-->
-<script src="scripts/bootstrap.js"></script>
+<!--微信弹出窗口-->
+<div class="modal fade" tabindex="-1" id="modal-wx" data-backdrop="static" data-original="images/wx.jpg">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        <h4 class="modal-title">腾达官方微信二维码</h4>
+      </div>
+      <div class="modal-body">
+        <p>打开微信，点击右上角的“+”，选择“扫一扫”功能，</p>
+        <p>对准下方二维码即可。</p>
+        <img alt="图片崩溃了" />
+      </div>
+    </div> <!-- /.modal-content -->
+  </div> <!-- /.modal-dialog -->
+</div> <!-- /.modal -->
+<!--QQ弹出窗口-->
+<div class="modal fade" tabindex="-1" id="modal-qq" data-backdrop="static" data-original="images/qq.jpg">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        <h4 class="modal-title">腾达官方QQ群二维码</h4>
+      </div>
+      <div class="modal-body">
+        <p>打开QQ，扫描加入腾达粉丝群</p>
+        <p>或搜索群号：465931688</p>
+        <img alt="图片崩溃了" />
+      </div>
+    </div> <!-- /.modal-content -->
+  </div> <!-- /.modal-dialog -->
+</div> <!-- /.modal -->
+
+<script src="//cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="scripts/index-imitation of Tenda.js"></script>
 
 
