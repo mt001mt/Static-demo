@@ -9,6 +9,7 @@
   }, 600);
   //$("#modal-wx-toggle").trigger("click");
 });*/
+//console.log(console.assert);
 $(function () {
   var hovershowDuration = 200, //hover时显示下拉菜单的时间，单位ms
       temp = $(".user-hovershow-toggle"),
