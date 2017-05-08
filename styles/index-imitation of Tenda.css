@@ -334,11 +334,11 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
-  /*filter: alpha(opacity=0);*/
-  opacity: 0;
-  text-indent: -999px\9;
-  background: url(../images/1x1.png) repeat\9;
-  background-image: none\9\0;
+  /*filter: alpha(opacity=0);
+  opacity: 0;*/
+  text-indent: -999px;
+  background: url(../images/1x1.png) repeat 0 0\9;
+  /*background-image: none\9\0;*/
 }
 
 /*4. 正文*/
@@ -673,8 +673,8 @@ body {
     color: #fd4f00;
     text-indent: 0;
     border: 2px solid #fd4f00;
-    filter: none;
-    opacity: 1;
+    /*filter: none;
+    opacity: 1;*/
   }
   .carousel-inner .link-a2 {
     color: #fff;
@@ -694,7 +694,6 @@ body {
     border: none;
     opacity: 0;
   }
-}
   /*4. 正文样式*/
   .maincontent h4 {
     font-size: 22px;

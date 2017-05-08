@@ -137,7 +137,7 @@ $(function () {
   //@return undefined
   function lazyImagehandler () {
     $(window).on("resize scroll", getImage);
-    $(document).ready(getImage);
+    getImage();//DOMContentLoaded时运行一次
     //遍历需要延迟加载图片的元素，并按需求加载图片
     //图片加载后，将该元素从加载图片队列中去除
     function getImage () {
