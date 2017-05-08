@@ -337,7 +337,7 @@ body {
   /*filter: alpha(opacity=0);
   opacity: 0;*/
   text-indent: -999px;
-  background: url(../images/1x1.png) repeat 0 0\9;
+  background: url(../images/1x1.png) repeat 0 0\0;
   /*background-image: none\9\0;*/
 }
 
@@ -692,7 +692,6 @@ body {
     width: auto;
     height: auto;
     border: none;
-    opacity: 0;
   }
   /*4. 正文样式*/
   .maincontent h4 {
@@ -720,12 +719,6 @@ body {
   }
   .maincontent--1 .row--1 {
     padding-top: 18.5px;
-  }
-  .maincontent--1 .thumbnail {
-  }
-  .maincontent--1 .thumbnail h5 {
-  }
-  .maincontent--1 .thumbnail p {
   }
   /**走进腾达**/
   .maincontent--2 {
